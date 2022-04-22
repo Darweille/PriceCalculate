@@ -3,9 +3,121 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta content="zh-tw" http-equiv="Content-Language">
-<title>費用試算</title>
-<link rel="stylesheet" type="text/css" href="general.css">
-<script type="text/javascript" src="calculate.js"></script>
+<title>交易費用試算器</title>
+<style type="text/css">
+body
+{
+	text-align: center;
+	background-color: #ffffff;
+	color: #000000;
+	text-shadow:  -1px -1px #ffffff, 1px 1px #888888;
+}
+
+body *
+{
+	font-size: 65px;
+}
+
+p
+{
+	margin: 25px auto 25px auto;
+}
+
+input
+{
+	color: #000000;
+	width: 350px;
+	text-align: center;
+	background-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: #000000;
+	border-bottom-width: thick;
+	outline: none;
+}
+
+.inputClass1
+{
+	border-bottom-width: thin;
+}
+
+.divClassMain
+{
+	width: 85%;
+	margin: 10px auto 10px auto;
+	border: 2px solid #000000;
+	border-radius: 25px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+.divClassMain input
+{
+	margin: 10pt auto 10pt auto;
+}
+
+#divBuy
+{
+	background-color: rgba(255,0,0,0.1);
+}
+
+#divSell
+{
+	background-color: rgba(0,255,0,0.1);
+}
+
+#tableOutside
+{
+	width: 95%;
+	margin: 30px auto 30px auto;
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 0px;
+
+}
+
+#pTittle
+{
+	font-weight: bold;
+	margin: 10pt auto 5pt auto;
+	font-size: 75px;
+}
+
+#Discount
+{
+	width: 200px;
+}
+</style>
+<script type="text/javascript">
+<!--
+function Calculate()
+{
+	var Fee = 0.001425;
+	var Tax = 0.0015
+	
+	var Discount = Number(document.getElementById("Discount").value);
+	
+	var BuyPrice = Number(document.getElementById("BuyPrice").value);
+	var BuyFee = (BuyPrice*(Fee*Discount))*1000;
+	
+	document.getElementById("BuyFee").value = BuyFee.toFixed(1);
+	
+	var SellPrice = Number(document.getElementById("SellPrice").value);
+	var SellFee = (SellPrice*(Fee * Discount))*1000;
+	var SellTax = (SellPrice*Tax)*1000;
+	
+	document.getElementById("SellFee").value = SellFee.toFixed(1);
+	document.getElementById("SellTax").value = SellTax.toFixed(1);
+	
+	var Total = (BuyFee + SellFee + SellTax).toFixed(1);
+	
+	document.getElementById("Total").value = Total;
+}
+//-->
+</script>
 </head>
 <body>
 <p class="pClass1">折扣成數: <input id="Discount" name="Discount" oninput="Calculate()" type="number" value="" size="4" tabindex="1"></p>
