@@ -16,4 +16,8 @@
 	
 	document.getElementById("SellFee").value = SellFee.toFixed(1);
 	document.getElementById("SellTax").value = SellTax.toFixed(1);
+	
+	var Total = (BuyFee + SellFee + SellTax).toFixed(1);
+	
+	document.getElementById("Total").value = Total;
 }
