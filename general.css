@@ -1,0 +1,26 @@
+﻿html *
+{
+	font-size: 70px;
+	margin: 15pt auto 15pt auto;
+}
+
+body
+{
+	text-align: center;
+	background-color: #ffffff;
+	color: #000000;
+	text-shadow:  -1px -1px white, 1px 1px #333
+}
+
+.inputClass1
+{
+	color: #000000;
+	width: 400px;
+	text-align: center;
+	background-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: #000000;
+	outline: none;
+}

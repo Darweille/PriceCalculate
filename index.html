@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="zh-tw" http-equiv="Content-Language">
+<title>費用試算</title>
+<link rel="stylesheet" type="text/css" href="general.css">
+<script type="text/javascript" src="calculate.js"></script>
+</head>
+<body>
+<p>折扣成數: <input id="Discount" name="Discount" class="inputClass1" oninput="Calculate()" type="number" value="" size="4"> </p>
+<hr>
+<table style="width: 90%">
+	<tr>
+		<td>買入</td>
+		<td>賣出</td>
+	</tr>
+	<tr>
+		<td><p>成交價: <input id="BuyPrice" name="BuyPrice" class="inputClass1" oninput="Calculate()" type="number" value="" size="4"> </p></td>
+		<td><p>成交價: <input id="SellPrice" name="SellPrice" class="inputClass1" oninput="Calculate()" type="number" value="" size="4"> </p></td>
+	</tr>
+	<tr>
+		<td><p>手續費: <input id="BuyFee" name="BuyFee" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p></td>
+		<td><p>手續費: <input id="SellFee" name="SellFee" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><p>交易稅: <input id="SellTax" name="SellTax" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p></td>
+	</tr>
+</table>
+</body>
+</html>
