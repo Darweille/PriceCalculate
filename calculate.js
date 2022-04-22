@@ -1,6 +1,6 @@
 ﻿function Calculate()
 {
-	var Fee = 0.0001425;
+	var Fee = 0.001425;
 	var Tax = 0.0015
 	
 	var Discount = Number(document.getElementById("Discount").value);
