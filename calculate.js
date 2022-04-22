@@ -6,13 +6,13 @@
 	var Discount = Number(document.getElementById("Discount").value);
 	
 	var BuyPrice = Number(document.getElementById("BuyPrice").value);
-	var BuyFee = (BuyPrice * (Fee * Discount))*1000;
+	var BuyFee = (BuyPrice*(Fee*Discount))*1000;
 	
 	document.getElementById("BuyFee").value = BuyFee.toFixed(1);
 	
 	var SellPrice = Number(document.getElementById("SellPrice").value);
-	var SellFee = (SellPrice * (Fee * Discount))*1000;
-	var SellTax = (SellPrice * Tax)*1000;
+	var SellFee = (SellPrice*(Fee * Discount))*1000;
+	var SellTax = (SellPrice*Tax)*1000;
 	
 	document.getElementById("SellFee").value = SellFee.toFixed(1);
 	document.getElementById("SellTax").value = SellTax.toFixed(1);

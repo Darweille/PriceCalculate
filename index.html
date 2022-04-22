@@ -8,27 +8,27 @@
 <script type="text/javascript" src="calculate.js"></script>
 </head>
 <body>
-<p>折扣成數: <input id="Discount" name="Discount" class="inputClass1" oninput="Calculate()" type="number" value="" size="4"> </p>
-<hr>
-<table style="width: 90%">
+<p class="pClass1">折扣成數: <input id="Discount" name="Discount" oninput="Calculate()" type="number" value="" size="4" tabindex="1"></p>
+<table id="tableOutside">
 	<tr>
-		<td>買入</td>
-		<td>賣出</td>
-	</tr>
-	<tr>
-		<td><p>成交價: <input id="BuyPrice" name="BuyPrice" class="inputClass1" oninput="Calculate()" type="number" value="" size="4"> </p></td>
-		<td><p>成交價: <input id="SellPrice" name="SellPrice" class="inputClass1" oninput="Calculate()" type="number" value="" size="4"> </p></td>
-	</tr>
-	<tr>
-		<td><p>手續費: <input id="BuyFee" name="BuyFee" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p></td>
-		<td><p>手續費: <input id="SellFee" name="SellFee" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td><p>交易稅: <input id="SellTax" name="SellTax" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p></td>
+		<td valign="top">
+			<div id="divBuy" class="divClassMain">
+				<p id="pTittle">買入</p>
+				<p>成交價: <input id="BuyPrice" name="BuyPrice" oninput="Calculate()" type="number" value="" size="4" tabindex="2"></p>
+				<p>手續費: <input id="BuyFee" name="BuyFee" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p>
+			</div>
+		</td>
+		
+		<td>
+			<div id="divSell" class="divClassMain">
+				<p id="pTittle">賣出</p>
+				<p>成交價: <input id="SellPrice" name="SellPrice" oninput="Calculate()" type="number" value="" size="4" tabindex="3"></p>
+				<p>手續費: <input id="SellFee" name="SellFee" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p>
+				<p>交易稅: <input id="SellTax" name="SellTax" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p>
+			</div>
+		</td>
 	</tr>
 </table>
-<hr>
-<p>總費用： <input id="Total" name="Total" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p>
+<p>總費用: <input id="Total" name="Total" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p>
 </body>
 </html>

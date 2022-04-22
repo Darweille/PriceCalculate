@@ -1,26 +1,85 @@
-﻿html *
-{
-	font-size: 70px;
-	margin: 15pt auto 15pt auto;
-}
-
-body
+﻿body
 {
 	text-align: center;
 	background-color: #ffffff;
 	color: #000000;
-	text-shadow:  -1px -1px white, 1px 1px #333
+	text-shadow:  -1px -1px #ffffff, 1px 1px #888888;
 }
 
-.inputClass1
+body *
+{
+	font-size: 65px;
+}
+
+p
+{
+	margin: 25px auto 25px auto;
+}
+
+input
 {
 	color: #000000;
-	width: 400px;
+	width: 350px;
 	text-align: center;
 	background-color: transparent;
 	border-left-color: transparent;
 	border-right-color: transparent;
 	border-top-color: transparent;
 	border-bottom-color: #000000;
+	border-bottom-width: thick;
 	outline: none;
+}
+
+.inputClass1
+{
+	border-bottom-width: thin;
+}
+
+.divClassMain
+{
+	width: 85%;
+	margin: 10px auto 10px auto;
+	border: 2px solid #000000;
+	border-radius: 25px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+.divClassMain input
+{
+	margin: 10pt auto 10pt auto;
+}
+
+#divBuy
+{
+	background-color: rgba(255,0,0,0.1);
+}
+
+#divSell
+{
+	background-color: rgba(0,255,0,0.1);
+}
+
+#tableOutside
+{
+	width: 95%;
+	margin: 30px auto 30px auto;
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 0px;
+
+}
+
+#pTittle
+{
+	font-weight: bold;
+	margin: 10pt auto 5pt auto;
+	font-size: 75px;
+}
+
+#Discount
+{
+	width: 200px;
 }
