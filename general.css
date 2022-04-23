@@ -3,20 +3,20 @@
 	text-align: center;
 	background-color: #ffffff;
 	color: #000000;
-	text-shadow:  -1px -1px #ffffff, 1px 1px #888888;
+	text-shadow: -1px -1px #ffffff, 1px 1px #888888;
 }
 
 body *
 {
-	font-size: 65px;
+	font-size: 64px;
 }
 
 p
 {
-	margin: 25px auto 25px auto;
+	margin: 24px auto 24px auto;
 }
 
-input
+.inputClass1, .inputClass2, .inputClass3
 {
 	color: #000000;
 	width: 350px;
@@ -30,9 +30,14 @@ input
 	outline: none;
 }
 
-.inputClass1
+.inputClass2
 {
 	border-bottom-width: thin;
+}
+
+.inputClass3
+{
+	width: 250px;
 }
 
 .divClassMain
@@ -41,7 +46,7 @@ input
 	margin: 10px auto 10px auto;
 	border: 2px solid #000000;
 	border-radius: 25px;
-	padding-top: 10px;
+	padding-top: 5px;
 	padding-right: 20px;
 	padding-bottom: 10px;
 	padding-left: 20px;
@@ -50,6 +55,20 @@ input
 .divClassMain input
 {
 	margin: 10pt auto 10pt auto;
+}
+
+.tableOutside
+{
+	width: 95%;
+	margin: 30px auto 30px auto;
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 0px;
+}
+
+.tableOutside tr td
+{
+	vertical-align: top;
 }
 
 #divBuy
@@ -62,15 +81,6 @@ input
 	background-color: rgba(0,255,0,0.1);
 }
 
-#tableOutside
-{
-	width: 95%;
-	margin: 30px auto 30px auto;
-	border-collapse: collapse;
-	border-style: solid;
-	border-width: 0px;
-
-}
 
 #pTittle
 {
@@ -82,4 +92,29 @@ input
 #Discount
 {
 	width: 200px;
+}
+
+#imageSetting
+{
+	width: 96px;
+	height: 96px;
+}
+
+#divSettingImage:active
+{
+	top: 12px;
+	right: 6.1%;
+}
+
+
+#checkboxSetting, #divSetting
+{
+	display: none;
+}
+
+#divSettingImage
+{
+	position: absolute;
+	top: 10px;
+	right: 6%;
 }

@@ -5,30 +5,47 @@
 <meta content="zh-tw" http-equiv="Content-Language">
 <title>交易費用試算器</title>
 <link rel="stylesheet" type="text/css" href="general.css">
-<script type="text/javascript" src="calculate.js"></script>
+<script type="text/javascript" src="general.js"></script>
 </head>
 <body>
-<p class="pClass1">折扣成數: <input id="Discount" name="Discount" oninput="Calculate()" type="number" value="" size="4" tabindex="1"></p>
-<table id="tableOutside">
+
+<label>折扣成數: <input id="Discount" name="Discount" class="inputClass1" oninput="Calculate()" type="number" value="" step="0.1" min="0"><span id="spanDiscount"></span></label>
+
+<div id="divSettingImage">
+<label><img id="imageSetting" src="setting.png"><input id="checkboxSetting" name="checkboxSetting" type="checkbox" onchange="CheckboxChange()"></label>
+</div>
+
+<div id="divSetting">
+	<table class="tableOutside">
+		<tr>
+			<td>手續費: <input id="Fee" name="Fee" class="inputClass3" oninput="Calculate()" type="number" value="0.1425" step="0.01" min="0">%</td>
+			<td>交易稅: <input id="Tax" name="Tax" class="inputClass3" oninput="Calculate()" type="number" value="0.15" step="0.01" min="0">%</td>
+		</tr>
+	</table>
+</div>
+
+<table class="tableOutside">
 	<tr>
-		<td valign="top">
+		<td>
 			<div id="divBuy" class="divClassMain">
 				<p id="pTittle">買入</p>
-				<p>成交價: <input id="BuyPrice" name="BuyPrice" oninput="Calculate()" type="number" value="" size="4" tabindex="2"></p>
-				<p>手續費: <input id="BuyFee" name="BuyFee" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p>
+				<p><label>成交價: <input id="BuyPrice" name="BuyPrice" class="inputClass1" oninput="Calculate()" type="number" value="" min="0"></label></p>
+				<p>手續費: <input id="BuyFee" name="BuyFee" class="inputClass2" type="number" value="" readonly="readonly"></p>
 			</div>
 		</td>
 		
 		<td>
 			<div id="divSell" class="divClassMain">
 				<p id="pTittle">賣出</p>
-				<p>成交價: <input id="SellPrice" name="SellPrice" oninput="Calculate()" type="number" value="" size="4" tabindex="3"></p>
-				<p>手續費: <input id="SellFee" name="SellFee" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p>
-				<p>交易稅: <input id="SellTax" name="SellTax" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p>
+				<p><label>成交價: <input id="SellPrice" name="SellPrice" class="inputClass1" oninput="Calculate()" type="number" value="" min="0"></label></p>
+				<p>手續費: <input id="SellFee" name="SellFee" class="inputClass2" type="number" value="" readonly="readonly"></p>
+				<p>交易稅: <input id="SellTax" name="SellTax" class="inputClass2" type="number" value="" readonly="readonly"></p>
 			</div>
 		</td>
 	</tr>
 </table>
-<p>總費用: <input id="Total" name="Total" class="inputClass1" type="number" value="" size="4" readonly="readonly"></p>
+
+<p>總費用: <input id="Total" name="Total" class="inputClass2" type="number" value="" readonly="readonly"></p>
+
 </body>
 </html>
