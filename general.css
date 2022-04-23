@@ -98,8 +98,8 @@ p
 {
 	width: 96px;
 	height: 96px;
-	filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
-	-webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
+	filter: drop-shadow(3px 3px 4px rgba(100, 100, 100, 0.5));
+	-webkit-filter: drop-shadow(3px 3px 4px rgba(100, 100, 100, 0.5));
 }
 
 #divSettingImage:active
