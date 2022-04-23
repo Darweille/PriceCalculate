@@ -3,41 +3,41 @@
 function Calculate()
 {
 	//讀取證交稅稅率及手續費費率
-	var Tax = Number(document.getElementById("Tax").value)/100; //預設為0.0015
-	var Fee = Number(document.getElementById("Fee").value)/100;  //預設為0.001425;
+	var Tax = Number(document.getElementById("inputTax").value)/100; //預設為0.0015
+	var Fee = Number(document.getElementById("inputFee").value)/100;  //預設為0.001425;
 	
 	//讀取折扣成數
 	if (DiscountPercentage == true)
 	{
-		var Discount = Number(document.getElementById("Discount").value) / 100;
+		var Discount = Number(document.getElementById("inputDiscount").value) / 100;
 	}
 	else
 	{
-		var Discount = Number(document.getElementById("Discount").value);
+		var Discount = Number(document.getElementById("inputDiscount").value);
 	}
 	
 	//讀取買入成交價
-	var BuyPrice = Number(document.getElementById("BuyPrice").value);
+	var BuyPrice = Number(document.getElementById("inputBuyPrice").value);
 	
 	//計算買入手續費
 	var BuyFee = (BuyPrice*(Fee*Discount))*1000;
 	
-	document.getElementById("BuyFee").value = BuyFee.toFixed(1);
+	document.getElementById("inputBuyFee").value = BuyFee.toFixed(1);
 	
 	//讀取賣出成交價
-	var SellPrice = Number(document.getElementById("SellPrice").value);
+	var SellPrice = Number(document.getElementById("inputSellPrice").value);
 	
 	//計算賣出手續費及交易稅
 	var SellFee = (SellPrice*(Fee*Discount))*1000;
 	var SellTax = (SellPrice*Tax)*1000;
 	
-	document.getElementById("SellFee").value = SellFee.toFixed(1);
-	document.getElementById("SellTax").value = SellTax.toFixed(1);
+	document.getElementById("inputSellFee").value = SellFee.toFixed(1);
+	document.getElementById("inputSellTax").value = SellTax.toFixed(1);
 	
 	//計算總費用
 	var Total = (BuyFee + SellFee + SellTax).toFixed(1);
 	
-	document.getElementById("Total").value = Total;
+	document.getElementById("inputTotal").value = Total;
 }
 
 function CheckboxChange()
@@ -46,18 +46,22 @@ function CheckboxChange()
 	
 	if (checkboxSetting == true)
 	{
-		document.getElementById("divSetting").style.display = "block";
-		document.getElementById("Discount").value = document.getElementById("Discount").value * 100;
-		document.getElementById("Discount").step = "1";
+		document.getElementById("divSetting").style.visibility = "visible";
+		document.getElementById("divSetting").style.height = "auto";
+		document.getElementById("inputDiscount").value = document.getElementById("inputDiscount").value * 100;
+		document.getElementById("inputDiscount").step = "1";
 		DiscountPercentage = true;
-		document.getElementById("spanDiscount").innerHTML = "%";
+		document.getElementById("spanDiscount").style.visibility = "visible";
+		document.getElementById("buttonSetting").innerHTML = "－";
 	}
 	else
 	{
-		document.getElementById("divSetting").style.display = "none";
-		document.getElementById("Discount").value = document.getElementById("Discount").value / 100;
-		document.getElementById("Discount").step = "0.1";
+		document.getElementById("divSetting").style.visibility = "hidden";
+		document.getElementById("divSetting").style.height = "0px";
+		document.getElementById("inputDiscount").value = document.getElementById("inputDiscount").value / 100;
+		document.getElementById("inputDiscount").step = "0.1";
 		DiscountPercentage = false;
-		document.getElementById("spanDiscount").innerHTML = "";
+		document.getElementById("spanDiscount").style.visibility = "hidden";
+		document.getElementById("buttonSetting").innerHTML = "＋";
 	}
 }
