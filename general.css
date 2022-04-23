@@ -98,12 +98,14 @@ p
 {
 	width: 96px;
 	height: 96px;
+	filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
+	-webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
 }
 
 #divSettingImage:active
 {
-	top: 12px;
-	right: 6.1%;
+	top: 17px;
+	right: 5.9%;
 }
 
 
@@ -115,6 +117,6 @@ p
 #divSettingImage
 {
 	position: absolute;
-	top: 10px;
+	top: 14px;
 	right: 6%;
 }
