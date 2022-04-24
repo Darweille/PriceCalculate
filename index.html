@@ -4,17 +4,16 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta content="zh-tw" http-equiv="Content-Language">
 <title>交易費用試算器</title>
-<link rel="stylesheet" type="text/css" href="general.css?20220424">
-<script type="text/javascript" src="general.js?202204242109"></script>
+<link rel="stylesheet" type="text/css" href="general.css?202204242137">
+<script type="text/javascript" src="general.js?202204242137"></script>
 </head>
 <body>
 
 <div id="divTop">
-	<p><label for="inputDiscount">折扣成數: <input id="inputDiscount" name="inputDiscount" class="inputClass1" oninput="Calculate()" type="number" value="" step="0.1" min="0"><span id="spanDiscount">%</span></label></p>
-	
-	<div id="divSettingButton">
-		<label for="checkboxSetting">[<span id="buttonSetting">＋</span><input id="checkboxSetting" name="checkboxSetting" type="checkbox" onchange="CheckboxChange()">]</label>
-	</div>
+	<p>
+	<label for="inputDiscount">折扣成數: <input id="inputDiscount" name="inputDiscount" class="inputClass1" oninput="Calculate()" type="number" value="" step="0.1" min="0"><span id="spanDiscount">%</span></label>
+	<label for="checkboxSetting"><span id="spanSettingButton">[<span id="buttonSetting">＋</span><input id="checkboxSetting" name="checkboxSetting" type="checkbox" onchange="CheckboxChange()">]</span></label>
+	</p>
 	
 	<div id="divSetting">
 		<div id="divSettingFee" class="divSettingFeeAndTax">
