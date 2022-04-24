@@ -38,6 +38,11 @@ function Calculate()
 	var Total = (BuyFee + SellFee + SellTax).toFixed(1);
 	
 	document.getElementById("inputTotal").value = Total;
+	
+	//計算收益
+	var Gain = ((SellPrice-BuyPrice)*1000)-Total;
+	
+	document.getElementById("inputGain").value = Gain.toFixed(0);
 }
 
 function CheckboxChange()

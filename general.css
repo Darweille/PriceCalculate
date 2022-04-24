@@ -17,10 +17,10 @@ p
 	margin: 15px auto 15px auto;
 }
 
-.inputClass1, .inputClass2, .inputClass3
+.inputClass1, .inputClass2, .inputClass3, .inputClass4
 {
 	color: #000000;
-	width: 350px;
+	width: 88%;
 	background-color: transparent;
 	border-left-color: transparent;
 	border-right-color: transparent;
@@ -38,6 +38,11 @@ p
 .inputClass3
 {
 	width: 250px;
+}
+
+.inputClass4
+{
+	width: 400px;
 }
 
 /* 頂部區塊 */
@@ -67,7 +72,7 @@ p
 #divSettingButton
 {
 	position: absolute;
-	top: 35px;
+	top: 40px;
 	right: 8%;
 	user-select: none;
 }
@@ -92,7 +97,7 @@ p
 
 .divSettingFeeAndTax
 {
-	width: 40%;
+	width: 45%;
 	margin: 10px auto 0px auto;
 }
 
@@ -142,7 +147,13 @@ p
 }
 
 /* 底部區塊 */
-#pTotal
+.divBottom
 {
-	clear: left;
+	
+}
+
+.pBottom
+{
+	text-align: center;
+	margin: 25pt auto 25pt auto;
 }
