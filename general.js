@@ -35,7 +35,7 @@ function Calculate()
 	document.getElementById("inputSellTax").value = SellTax.toFixed(1);
 	
 	//計算總費用
-	var Total = (BuyFee + SellFee + SellTax).toFixed(1);
+	var Total = (BuyFee + SellFee + SellTax).toFixed(0);
 	
 	document.getElementById("inputTotal").value = Total;
 	
