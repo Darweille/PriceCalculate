@@ -20,7 +20,7 @@ p
 .divOutside
 {
 	width: 95%;
-	margin: 25px auto 20px auto;
+	margin: 10px auto 10px auto;
 	display: flex;
 }
 
@@ -152,7 +152,7 @@ p
 .pBottom
 {
 	text-align: right;
-	margin: 25pt auto 25pt auto;
+	margin: 20pt auto 20pt auto;
 }
 
 /* 解析度 >= 1281 */
@@ -162,8 +162,6 @@ p
 	{
 		font-size: 10px;
 	}
-	
-	body { color: #ff0000; }
 	
 	.inputClass3, .inputClass4
 	{
@@ -179,8 +177,6 @@ p
 	{
 		font-size: 10px;
 	}
-	
-	body { color: #00ff00; }
 	
 	.inputClass3, .inputClass4
 	{
@@ -205,15 +201,11 @@ p
 	{
 		width: 200px;
 	}
-	
-	body { color: #ffff00; }
 }
 
 /* 解析度 <= 800 */
 @media (max-width: 800px)
 {	
-	body { color: #ffff00; }
-	
 	html
 	{
 		font-size: 8px;
@@ -238,8 +230,6 @@ p
 		font-size: 7px;
 	}
 	
-	body { color: #00ffff; }
-	
 	.inputClass5
 	{
 		width: 250px;
@@ -253,8 +243,6 @@ p
 	{
 		font-size: 6px;
 	}
-	
-	body { color: #0000ff; }
 	
 	.inputClass1
 	{
