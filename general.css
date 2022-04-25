@@ -1,15 +1,15 @@
-﻿body
+﻿html
 {
-	text-align: center;
+	font-size: 10px;
+}
+
+body
+{
 	background-color: #ffffff;
 	color: #000000;
 	text-shadow: -1px -1px #ffffff, 1px 1px #888888;
-}
-
-body *
-{
 	text-align: center;
-	font-size: 64px;
+	font-size: 5.5rem;
 }
 
 p
@@ -17,54 +17,73 @@ p
 	margin: 15px auto 15px auto;
 }
 
-.inputClass1, .inputClass2, .inputClass3, .inputClass4
+.divOutside
+{
+	width: 95%;
+	margin: 10px auto 10px auto;
+	display: flex;
+}
+
+/* 輸入區塊通用設定 */
+.inputClass1, .inputClass2, .inputClass3, .inputClass4, .inputClass5
 {
 	color: #000000;
-	width: 88%;
+	text-align: center;
 	background-color: transparent;
 	border-left-color: transparent;
 	border-right-color: transparent;
 	border-top-color: transparent;
 	border-bottom-color: #000000;
-	border-bottom-width: thick;
+	border-bottom-width: 6px;
 	outline: none;
+	font-size: 5.5rem;
+}
+
+.inputClass1
+{
+	width: 200px;
 }
 
 .inputClass2
 {
-	border-bottom-width: 2px;
+	width: 250px;
 }
 
 .inputClass3
 {
-	width: 250px;
+	width: 88%;
 }
 
 .inputClass4
 {
+	border-bottom-width: 2px;
+}
+
+.inputClass5
+{
 	width: 400px;
-	border-bottom-width: 3px;
+	border-bottom-width: 4px;
 }
 
 /* 頂部區塊 */
 #divTop
 {
-	width: 90%;
+	width: 100%;
 	margin: 15px auto 10px auto;
 	border: 2px solid #000000;
 	border-radius: 45px;
 	padding-top: 10px;
-	padding-right: 25px;
+	padding-right: 5px;
 	padding-bottom: 25px;
-	padding-left: 25px;
+	padding-left: 5px;
 }
 
-#inputDiscount
+#inputFeeDiscountPercentage, #checkboxSetting
 {
-	width: 200px;
+	display: none;
 }
 
-#spanDiscount
+#spanDiscountPercentage, #divSetting
 {
 	visibility: hidden;
 }
@@ -77,42 +96,16 @@ p
 	user-select: none;
 }
 
-#divSettingButton *
-{
-	font-size: 60px;
-}
-
-#checkboxSetting
-{
-	display: none;
-}
-
-/* 設定區 */
 #divSetting
 {
-	display: flex;
-	visibility: hidden;
+	/* display: flex; */
 	height: 0px;
 }
 
-.divSettingFeeAndTax
-{
-	width: 45%;
-	margin: 10px auto 0px auto;
-}
-
-
 /* 中間區塊 買入與賣出 */
-.divOutside
-{
-	width: 100%;
-	margin: 25px auto 20px auto;
-	display: flex;
-}
-
 .divBuyAndSell
 {
-	width: 40%;
+	width: 100%;
 	margin: 10px auto 10px auto;
 	border: 2px solid #000000;
 	border-radius: 45px;
@@ -130,11 +123,14 @@ p
 #divBuy
 {
 	background-color: rgba(255,0,0,0.1);
+	margin-right: 10px;
+	
 }
 
 #divSell
 {
 	background-color: rgba(0,255,0,0.1);
+	margin-left: 10px;
 }
 
 #pTittle
@@ -142,7 +138,7 @@ p
 	color: #222222;
 	font-weight: bolder;
 	margin: 10pt auto 5pt auto;
-	font-size: 75px;
+	font-size: 6rem;
 	text-shadow: 2px 2px 4px #ffffff;
 }
 
@@ -156,5 +152,110 @@ p
 .pBottom
 {
 	text-align: right;
-	margin: 25pt auto 25pt auto;
+	margin: 20pt auto 20pt auto;
+}
+
+/* 解析度 >= 1281 */
+@media (min-width: 1281px)
+{
+	html
+	{
+		font-size: 10px;
+	}
+	
+	.inputClass3, .inputClass4
+	{
+		width: 50%;
+	}
+	
+}
+
+/* 解析度 <= 1280 */
+@media (max-width: 1280px)
+{
+	html
+	{
+		font-size: 10px;
+	}
+	
+	.inputClass3, .inputClass4
+	{
+		width: 88%;
+	}
+}
+
+/* 解析度 <= 960 */
+@media (max-width: 960px)
+{
+	html
+	{
+		font-size: 9px;
+	}
+	
+	.inputClass1
+	{
+		width: 150px;
+	}
+	
+	.inputClass2
+	{
+		width: 200px;
+	}
+}
+
+/* 解析度 <= 800 */
+@media (max-width: 800px)
+{	
+	html
+	{
+		font-size: 8px;
+	}
+	
+	.inputClass1
+	{
+		width: 140px;
+	}
+	
+	.inputClass2
+	{
+		width: 190px;
+	}
+}
+
+/* 解析度 <= 720 */
+@media (max-width: 720px)
+{
+	html
+	{
+		font-size: 7px;
+	}
+	
+	.inputClass5
+	{
+		width: 250px;
+	}
+}
+
+/* 解析度 <= 640 */
+@media (max-width: 640px)
+{
+	html
+	{
+		font-size: 6px;
+	}
+	
+	.inputClass1
+	{
+		width: 100px;
+	}
+	
+	.inputClass2
+	{
+		width: 150px;
+	}
+	
+	.inputClass5
+	{
+		width: 200px;
+	}
 }
